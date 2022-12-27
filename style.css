@@ -3,7 +3,7 @@
     padding: 0;
 }
 Video {
-Width:98%;
+Width: 100%;
 Height:500px;
 }
 body{
@@ -20,7 +20,7 @@ float:center;
 }
 
 div{
-float: center;
+float: left;
 text-color:brown;
 width:98%;
 }
