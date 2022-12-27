@@ -3,8 +3,7 @@
     padding: 0;
 }
 Video {
-Width: 600x;
-Height:500px;
+object-fit: fill;
 }
 body{
 background-image: url("rodenttube background.png");
