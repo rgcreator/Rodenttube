@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+Video {
+Width:98%;
+Height:500px;
+}
 body{
 background-image: url("rodenttube background.png");
 background-repeat:no-repeat;
