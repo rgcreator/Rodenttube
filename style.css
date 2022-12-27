@@ -22,6 +22,7 @@ div{
 float: left;
 text-color:brown;
 width:98%;
+object-fit: fill;
 }
 .title{
 background-color: #654321;
