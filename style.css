@@ -18,6 +18,8 @@ float:center;
 div{
 float:left;
 text-color:brown;
+Width:98%;
+height:500px;
 }
 .title{
 background-color: #654321;
@@ -25,10 +27,7 @@ color: #00D200;
 font-weight:bold;
 font-size:20px;
 }
-video{
-width:98%;
-height:500px;
-}
+
 
 .con{
     margin: 20px 10px;
