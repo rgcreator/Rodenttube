@@ -3,7 +3,6 @@
     padding: 0;
 }
 Video {
-object-fit: fill;
 }
 body{
 background-image: url("rodenttube background.png");
