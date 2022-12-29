@@ -1,5 +1,3 @@
-$(d
-
 let search = document.getElementById('search');
 let con = document.getElementsByClassName('con');
 
