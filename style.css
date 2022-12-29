@@ -13,6 +13,11 @@ background-repeat:no-repeat;
   max-width: 100%;
     overflow-x: hidden;
 }
+  iframe {
+        position: relative;
+        top: -64px;
+	height:500px;
+    }
 .ytp-title-text {
 
 display: none;
