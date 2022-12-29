@@ -1,6 +1,4 @@
-$(document).ready(function(){
-   $('#videoElementID').bind('contextmenu',function() { return false; });
-});
+$(d
 
 let search = document.getElementById('search');
 let con = document.getElementsByClassName('con');
@@ -30,3 +28,6 @@ search.addEventListener('input', (e)=>{
         });
     }
 }
+$(document).ready(function(){
+   $('#videoElementID').bind('contextmenu',function() { return false; });
+});
