@@ -25,4 +25,4 @@ search.addEventListener('input', (e)=>{
             ele.classList.remove('hidden');
         });
     }
-}
+})
