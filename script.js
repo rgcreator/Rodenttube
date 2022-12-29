@@ -1,3 +1,7 @@
+$(document).ready(function(){
+   $('#videoElementID').bind('contextmenu',function() { return false; });
+});
+
 let search = document.getElementById('search');
 let con = document.getElementsByClassName('con');
 
@@ -25,6 +29,4 @@ search.addEventListener('input', (e)=>{
             ele.classList.remove('hidden');
         });
     }
-}$(document).ready(function(){
-   $('#videoElementID').bind('contextmenu',function() { return false; });
-});
+}
