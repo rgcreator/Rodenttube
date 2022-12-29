@@ -5,6 +5,10 @@
   var clicky_custom = clicky_custom || {};
   clicky_custom.html_media_track = 1;
 </script>
+<script> $(document).ready(function(){
+   $('#videoElementID').bind('contextmenu',function() { return false; });
+});
+</script>
 
 <!-- your hypothetical tracking code -->
 <script src="http://static.getclicky.com/123.js" type="text/javascript"></script>
