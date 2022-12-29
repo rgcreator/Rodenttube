@@ -26,6 +26,3 @@ search.addEventListener('input', (e)=>{
         });
     }
 }
-$(document).ready(function(){
-   $('#videoElementID').bind('contextmenu',function() { return false; });
-});
