@@ -47,7 +47,7 @@ font-size:20px;
 	aspect-ratio: 16/9;
 	/* No clicking/hover effects */
 	.title: hidden;
-	
+	}
 .con{
     margin: 20px 10px;
 }
@@ -60,4 +60,4 @@ font-size:20px;
 
 .hidden{
     display: none;
-}
+    }
