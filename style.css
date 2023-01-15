@@ -40,14 +40,6 @@ font-weight:bold;
 font-size:20px;
 }
 
-.youtube-container {
-	overflow: hidden;
-	width: 100%;
-	/* Keep it the right aspect-ratio */
-	aspect-ratio: 16/9;
-	/* No clicking/hover effects */
-	.title: hidden;
-	}
 .con{
     margin: 20px 10px;
 }
