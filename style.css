@@ -7,8 +7,7 @@ Video {
 body{
 background-image: url("https://rgcreator.github.io/Beverpedia-html/RG.png");
 background-repeat:no-repeat;
-  background-attachment: fixed; 
-  background-size:100% 100%;
+  background-attachment: cover; 
   display:block;
   max-width: 100%;
     overflow-x: hidden;
