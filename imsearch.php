@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="style/print.css?2023-1-3-0" media="print" />
 		<link rel="stylesheet" href="style/style.css?2023-1-3-0" media="screen,print" />
 		<link rel="stylesheet" href="style/template.css?2023-1-3-0" media="screen" />
-		<link rel="stylesheet" href="pcss/imsearch.css?2023-1-3-0-638146854529650063" media="screen,print" />
+		<link rel="stylesheet" href="pcss/imsearch.css?2023-1-3-0-638147349264944233" media="screen,print" />
 		<script src="res/jquery.js?2023-1-3-0"></script>
 		<script src="res/x5engine.js?2023-1-3-0" data-files-version="2023-1-3-0"></script>
 		<script>
@@ -30,7 +30,7 @@
 				<div id="imPage">
 					<header id="imHeader">
 						<h1 class="imHidden">Zoeken - Nieuw project</h1>
-						<div id="imHeaderObjects"><div id="imHeader_imObjectSearch_01_wrapper" class="template-object-wrapper"><div id="imHeader_imObjectSearch_01"><form id="imHeader_imObjectSearch_01_form" action="imsearch.php" method="get"><fieldset><input type="text" id="imHeader_imObjectSearch_01_field" name="search" value="" /><button id="imHeader_imObjectSearch_01_button">Zoeken</button></fieldset></form><script>$('#imHeader_imObjectSearch_01_button').click(function() { $(this).prop('disabled', true); setTimeout(function(){ $('#imHeader_imObjectSearch_01_button').prop('disabled', false);}, 900); $('#imHeader_imObjectSearch_01_form').submit(); return false; });</script></div></div><div id="imHeader_imObjectTitle_02_wrapper" class="template-object-wrapper"><div id="imHeader_imObjectTitle_02"><span id ="imHeader_imObjectTitle_02_text" >Rodenttube</span></div></div></div>
+						<div id="imHeaderObjects"><div id="imHeader_imObjectTitle_02_wrapper" class="template-object-wrapper"><div id="imHeader_imObjectTitle_02"><span id ="imHeader_imObjectTitle_02_text" >Rodenttube</span></div></div></div>
 					</header>
 					<div id="imStickyBarContainer">
 						<div id="imStickyBarGraphics"></div>
