@@ -72,9 +72,8 @@
 #imCellStyleGraphics_1 { position: absolute; top: 10px; bottom: 10px; background-color: transparent; }
 #imCellStyleBorders_1 { position: absolute; top: 10px; bottom: 10px; }
 #imObjectGallery_01 { width: 100%; max-width: 100%; }
-#imObjectGallery_01 .imSControls { position: absolute; bottom: 0px; right: 0px; padding: 3px; background-color: white; font-size: 25px; font-family: "Trebuchet MS"); font-weight: bold; text-align: center; }
-#imObjectGallery_01 .imSControls .imPNext { float: left; margin-right: 5px; cursor: pointer; }
-#imObjectGallery_01 .imSControls .imPPrev { float: left; margin-right: 30px; margin-left: 5px; cursor: pointer; }
+#imObjectGallery_01 { overflow: hidden; }
+#imObjectGallery_01 > div { margin: 0 auto; }
 #imObjectGallery_01 a:link, #imContent #imObjectGallery_01 a:hover, #imContent #imObjectGallery_01 a:visited, #imContent #imObjectGallery_01 a:active { border: none; background-color: transparent; text-decoration: none; }
 @media (min-width: 1150.0px) {
 	#imCell_1 { padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; }

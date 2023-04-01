@@ -607,7 +607,8 @@ class imBlog
             // Post
             return htmlspecialchars(str_replace("\n", " ", $imSettings['blog']['posts'][$data['id']]['keywords']));
         } 
-        return "";
+        // Default (Home page): Show the blog keywords
+        return htmlspecialchars(str_replace("\n", " ", $imSettings['blog']['keywords']));
     }
 
     /**

@@ -5,7 +5,7 @@
 		b = x.boot;
 
 	s.siteId = '5191A37501D6DC317C2B92E92F5F134B';
-	s.version = '2023-1-3-0';
+	s.version = '2023-1-4-0';
 	b.push(function () {
 		x.setupDateTime();
 		x.imAccess.showLogout();

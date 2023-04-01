@@ -5,16 +5,16 @@
 		<title>Zoeken - Nieuw project</title>
 		<meta charset="utf-8" />
 		<!--[if IE]><meta http-equiv="ImageToolbar" content="False" /><![endif]-->
-		<meta name="generator" content="Incomedia WebSite X5 Evo 2023.1.3 - www.websitex5.com" />
+		<meta name="generator" content="Incomedia WebSite X5 Evo 2023.1.4 - www.websitex5.com" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
-		<link rel="stylesheet" href="style/reset.css?2023-1-3-0" media="screen,print" />
-		<link rel="stylesheet" href="style/print.css?2023-1-3-0" media="print" />
-		<link rel="stylesheet" href="style/style.css?2023-1-3-0" media="screen,print" />
-		<link rel="stylesheet" href="style/template.css?2023-1-3-0" media="screen" />
-		<link rel="stylesheet" href="pcss/imsearch.css?2023-1-3-0-638147349264944233" media="screen,print" />
-		<script src="res/jquery.js?2023-1-3-0"></script>
-		<script src="res/x5engine.js?2023-1-3-0" data-files-version="2023-1-3-0"></script>
+		<link rel="stylesheet" href="style/reset.css?2023-1-4-0" media="screen,print" />
+		<link rel="stylesheet" href="style/print.css?2023-1-4-0" media="print" />
+		<link rel="stylesheet" href="style/style.css?2023-1-4-0" media="screen,print" />
+		<link rel="stylesheet" href="style/template.css?2023-1-4-0" media="screen" />
+		<link rel="stylesheet" href="pcss/imsearch.css?2023-1-4-0-638159759493575173" media="screen,print" />
+		<script src="res/jquery.js?2023-1-4-0"></script>
+		<script src="res/x5engine.js?2023-1-4-0" data-files-version="2023-1-4-0"></script>
 		<script>
 			window.onload = function(){ checkBrowserCompatibility('Uw browser ondersteunt de functies niet die nodig zijn om deze website weer te geven.','Uw browser ondersteunt mogelijk de functies niet die nodig zijn om deze website weer te geven.','[1]Werk uw browser bij[/1] of [2]ga verder zonder bij te werken[/2].','http://outdatedbrowser.com/'); };
 			x5engine.utils.currentPagePath = 'imsearch.php';
