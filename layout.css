@@ -1,5 +1,7 @@
 h1{
     color: green;
+    text-align: center;
+font-size: 60px;
 }
 h2{
     text-align: center;
@@ -10,15 +12,24 @@ video{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 512px;
+    width: 512px;
 }
 body{
     background-color: #654321;
 }
 p{
     color: green;
-    font-size: 20px;
+    font-size: 30px;
 }
 video:hover{
     box-shadow: 0 0 30px green, 0 0 30px green, 0 0 30px green;
 
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
 }
