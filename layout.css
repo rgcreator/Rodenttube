@@ -15,11 +15,6 @@ video{
     height: 512px;
     width: 512px;
 }
-audio{
- display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 body{
     background-color: #654321;
 }
@@ -39,5 +34,26 @@ img{
     width: 200px;
 }
 audio{
-width:100%;
+    width: 100%;
 }
+    audio::-webkit-media-controls-play-button {
+        transform: scale(5, 5);
+    }
+    
+    audio::-webkit-media-controls-timeline {
+        height: 50px;
+        transform: scale(0.5, 0.8);  
+    }
+    audio::webkit-media-controls-volume-slider{
+        transform: scale(5, 5);
+    }
+    audio::-webkit-media-controls-mute-button{
+        transform: scale(5, 5);
+    }
+    audio::-webkit-media-controls-timeline-container{
+        transform: scale(5, 5);
+    }
+    audio::-webkit-media-controls-current-time-display{
+        transform: scale(5, 5);
+        margin-left: 200px;
+    }
