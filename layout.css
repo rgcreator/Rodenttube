@@ -34,26 +34,58 @@ img{
     width: 200px;
 }
 audio{
-    width: 100%;
+    display: block;
+ margin-left: auto;
+    margin-right: auto;
 }
     audio::-webkit-media-controls-play-button {
-        transform: scale(5, 5);
+        transform: scale(50,5);
+       background-color: green;
     }
-    
     audio::-webkit-media-controls-timeline {
-        height: 50px;
-        transform: scale(0.5, 0.8);  
+      visibility: hidden;
     }
-    audio::webkit-media-controls-volume-slider{
-        transform: scale(5, 5);
-    }
+    audio::-webkit-media-controls-volume-slider{
+
+visibility: hidden;    
+}
     audio::-webkit-media-controls-mute-button{
-        transform: scale(5, 5);
+       visibility: hidden;
     }
     audio::-webkit-media-controls-timeline-container{
-        transform: scale(5, 5);
+    visibility: hidden;
     }
     audio::-webkit-media-controls-current-time-display{
-        transform: scale(5, 5);
-        margin-left: 200px;
+        visibility: hidden;
+
+    }
+    audio::-webkit-media-controls-time-remaining-display{
+     visibility: hidden;
+    }
+    audio::-webkit-media-controls-timeline-container{
+        visibility: hidden;
+    }
+    audio::-webkit-media-controls-timeline{
+        visibility: hidden;
+    }
+    audio::-webkit-media-controls-volume-slider{
+        visibility: hidden;
+    }
+    audio::-webkit-media-controls-volume-slider-container{
+        visibility: hidden;
+    }
+    audio::-webkit-media-controls-mute-button{
+        visibility: hidden;
+    }
+    audio::-webkit-media-controls-fullscreen-button{
+        visibility: hidden;
+    }
+    audio::-webkit-media-controls-rewind-button{
+        visibility: hidden;
+    }
+    audio::-webkit-media-controls-return-to-realtime-button{
+        visibility: hidden;
+    }
+    audio .controls progress{
+        display: hidden;
     }
