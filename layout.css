@@ -1,11 +1,11 @@
 h1{
-    color: green;
+    color: rgb(110, 164, 110);
     text-align: center;
 font-size: 60px;
 }
 h2{
     text-align: center;
-    color: green;
+    color: rgb(110, 164, 110);
     font-size: 60px;
 }
 video{
@@ -19,12 +19,8 @@ body{
     background-color: #654321;
 }
 p{
-    color: green;
+    color: rgb(110, 164, 110);
     font-size: 30px;
-}
-video:hover{
-    box-shadow: 0 0 30px green, 0 0 30px green, 0 0 30px green;
-
 }
 img{
     display: block;
