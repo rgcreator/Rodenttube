@@ -55,19 +55,6 @@
   // Get the audio element
   var music_player = document.querySelector("#music_list audio");
 
-  // function for moving to next audio file
-  function next () {
-      // Check for last audio file in the playlist
-      if (i === files.length - 1) {
-          i = 0;
-      } else {
-          i++;
-      }
-
-      // Change the audio element source
-      music_player.src = files[i];
-  }
-
   function random () {
       // Check for last audio file in the playlist
       if (i === files.length - 1) {
@@ -90,7 +77,7 @@
       music_player.src = rand;
 
       // Listen for the music ended event, to play the next audio file
-      music_player.addEventListener('ended', next, false)
+      music_player.addEventListener('ended', random, false);
   }
 </script>
   <footer>
