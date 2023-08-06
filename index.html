@@ -18,8 +18,7 @@
   <audio controls autoplay></audio>
 </div>
 <div>
-  <button type="button" onclick="next ()">Volgende</button>	
-  <button type="button" onclick="previous ()">Vorige</button>
+  <button type="button" onclick="random ()">Volgende</button>
 </div>
 <script>
   var files = [
@@ -49,7 +48,7 @@
       "muziek/Zonder mama.mp3 ",
   ];
 
-  var rand = files[~~(Math.random() * files.length)];
+
   // Current index of the files array
   var i = 0;
 
@@ -69,7 +68,7 @@
       music_player.src = files[i];
   }
 
-  function previous () {
+  function random () {
       // Check for last audio file in the playlist
       if (i === files.length - 1) {
           i = 0;
@@ -78,7 +77,8 @@
       }
 
       // Change the audio element source
-      music_player.src = files[i];
+      var rand = files[~~(Math.random() * files.length)];
+      music_player.src = rand;
   }
 
   // Check if the player is selected
