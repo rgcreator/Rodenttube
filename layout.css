@@ -17,6 +17,8 @@ video{
 }
 body{
     background-color: #654321;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 p{
     color: rgb(110, 164, 110);
