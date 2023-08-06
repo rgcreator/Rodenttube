@@ -49,6 +49,7 @@
       "muziek/Zonder mama.mp3 ",
   ];
 
+  var rand = files[~~(Math.random() * files.length)];
   // Current index of the files array
   var i = 0;
 
@@ -85,7 +86,8 @@
       throw "Playlist Player does not exists ...";
   } else {
       // Start the player
-      music_player.src = files[i];
+      var rand = files[~~(Math.random() * files.length)];
+      music_player.src = rand;
 
       // Listen for the music ended event, to play the next audio file
       music_player.addEventListener('ended', next, false)
