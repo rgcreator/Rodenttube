@@ -48,18 +48,6 @@ function setup() {
       }
     
       newsong.addEventListener('click', getRandomsong);
-        const { file, author, title } = data[randomIdx];
-        
-        setTimeout(() => {
-          document.getElementById('text').innerHTML = `${file}`;
-          document.getElementById('author').innerHTML = `-${author}`;
-          document.getElementById('title').innerHTML = `${title}`;
-          var audio = document.getElementById('audio');
-          audio.src= `${file}`;
-          audio.load();         
-        }, 500)
-      }
-      newQuote.addEventListener('click', getRandomsong);
     
       getRandomsong();
     }).catch(error => console.log(error.message))
@@ -67,18 +55,10 @@ function setup() {
 
 //Load on run
 document.addEventListener('DOMContentLoaded', setup); 
-<<<<<<< HEAD
 
 $(document).ready(function(){
    $('p').css('text-align','center');
 });
   </script>
   </body>
-=======
-</script>
-  <footer>
-    Deze site is gemaakt door FC Knaagdier
-  </footer>
-        </body>
->>>>>>> 627fc9dfe144f731fcbb53872ac1ddc636707eb4
 </html>
