@@ -22,67 +22,63 @@ Your browser does not support the audio format.
       </div>
   </div> 
 <script>
-  var files = [
-      "muziek/10.000-beukennoten.ogg",
-      "muziek/Cupido.mp3",
-      "muziek/De Beverdans.mp3",
-      "muziek/Dit is Rodenttube.mp3",
-      "muziek/eet sla.ogg",
-      "muziek/Hij knaagt de mooiste.mp3",
-      "muziek/Iemand waar ik bomen mee kan knagen.mp3",
-      "muziek/Ik ben Ricardo.mp3",
-      "muziek/Ik knaag hout met achtergrond muziek.mp3",
-      "muziek/Kerstbever.ogg",
-      "muziek/Knagen.ogg",
-      "muziek/Leve het knaagdierleven.mp3",
-      "muziek/Nibble Again.ogg",
-      "muziek/Niemand kan beter knagen dan ik.mp3",
-      "muziek/O Beverburcht 2.ogg",
-      "muziek/Rodenttube Rap.ogg",
-      "muziek/Uiteindelijk maakt geld niks uit.mp3",
-      "muziek/Vrede wereldwijd.mp3",
-      "muziek/We gaan naar een bos.mp3",
-      "muziek/Wedden.mp3",
-      "muziek/Wie knaagt er aan die boom.mp3",
-      "muziek/Wood.ogg ",
-      "muziek/Zoek de connectie.mp3 ",
-      "muziek/Zonder mama.mp3 ",
-  ];
+    
+ 	
+let newsong = document.getElementById('new-song');
 
 
-  // Current index of the files array
-  var i = 0;
+let songbox = document.getElementById('song-box');
 
-  // Get the audio element
-  var music_player = document.querySelector("#music_list audio");
-
-  function random () {
-      // Check for last audio file in the playlist
-      if (i === files.length - 1) {
-          i = 0;
-      } else {
-          eval(i--);
+function setup() {
+  fetch('code/nummers.json')
+    .then(response => response.json())
+    .then(data => {
+      function getRandomsong() {
+        
+        const randomIdx = parseInt(Math.random() * data.length);
+        const { file, author, title} = data[randomIdx];
+        
+        setTimeout(() => {
+          document.getElementById('title').innerHTML = `${title}`;
+          document.getElementById('author').innerHTML = `-${author}`;
+          let audio = document.getElementById('audio');
+          audio.src= `${file}`;
+          audio.load();          
+        })
       }
+    
+      newsong.addEventListener('click', getRandomsong);
+        const { file, author, title } = data[randomIdx];
+        
+        setTimeout(() => {
+          document.getElementById('text').innerHTML = `${file}`;
+          document.getElementById('author').innerHTML = `-${author}`;
+          document.getElementById('title').innerHTML = `${title}`;
+          var audio = document.getElementById('audio');
+          audio.src= `${file}`;
+          audio.load();         
+        }, 500)
+      }
+      newQuote.addEventListener('click', getRandomsong);
+    
+      getRandomsong();
+    }).catch(error => console.log(error.message))
+}
 
-      // Change the audio element source
-      var rand = files[~~(Math.random() * files.length)];
-      music_player.src = rand;
-  }
+//Load on run
+document.addEventListener('DOMContentLoaded', setup); 
+<<<<<<< HEAD
 
-  // Check if the player is selected
-  if (music_player === null) {
-      throw "Playlist Player does not exists ...";
-  } else {
-      // Start the player
-      var rand = files[~~(Math.random() * files.length)];
-      music_player.src = rand;
-
-      // Listen for the music ended event, to play the next audio file
-      music_player.addEventListener('ended', random, false);
-  }
+$(document).ready(function(){
+   $('p').css('text-align','center');
+});
+  </script>
+  </body>
+=======
 </script>
   <footer>
     Deze site is gemaakt door FC Knaagdier
   </footer>
         </body>
+>>>>>>> 627fc9dfe144f731fcbb53872ac1ddc636707eb4
 </html>
