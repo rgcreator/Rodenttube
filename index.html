@@ -1,88 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-<link rel="icon" type="image/x-icon" href="images/Rodenttube logo.png">
-<meta name="description" content="Gratis familievriendelijke nummers">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="stylesheet" href="layout.css">
-
-    </head>
-<body>
-  <div id="content">
-
-  </ul>
-  </div>
-    <h1>Rodenttube</h1>
-    <img src="images/Rodenttube logo.png" width="100px" height="100px"decoding="async"  loading="lazy"
-></img>
-<div id="music_list">
-  <audio controls autoplay nodownload noremoteplayback></audio>
-</div>
-<div>
-  <button type="button" onclick="random ()">Volgende</button>
-</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rodenttube</title>
+  <link rel="stylesheet" href="layout.css">
+</head>
+	     <body>
+        <h1>Rodenttube</h1>
+        <img src="images/fcknaagdierlogo.jpg	" alt="logo" width="100" height="100">
+        <p style="text-align: center; font-weight: bold;" id="title"></p>
+        <p style="text-align: center; font-weight:  bold;" id="author"></p>
+    <div id="song-box" >
+      <br>
+      <audio id="audio" controls="controls" autoplay>
+<source id="audioSource" src=""></source>
+Your browser does not support the audio format.
+</audio>
+      
+      <div class="links">
+          <button id="new-song">Volgende</a>
+      </div>
+  </div> 
 <script>
-  var files = [
-      "muziek/10.000-beukennoten.ogg",
-      "muziek/Cupido.mp3",
-      "muziek/De Beverdans.mp3",
-      "muziek/Dit is Rodenttube.mp3",
-      "muziek/eet sla.ogg",
-      "muziek/Hij knaagt de mooiste.mp3",
-      "muziek/Iemand waar ik bomen mee kan knagen.mp3",
-      "muziek/Ik ben Ricardo.mp3",
-      "muziek/Ik knaag hout met achtergrond muziek.mp3",
-      "muziek/Kerstbever.ogg",
-      "muziek/Knagen.ogg",
-      "muziek/Leve het knaagdierleven.mp3",
-      "muziek/Nibble Again.ogg",
-      "muziek/Niemand kan beter knagen dan ik.mp3",
-      "muziek/O Beverburcht 2.ogg",
-      "muziek/Rodenttube Rap.ogg",
-      "muziek/Uiteindelijk maakt geld niks uit.mp3",
-      "muziek/Vrede wereldwijd.mp3",
-      "muziek/We gaan naar een bos.mp3",
-      "muziek/Wedden.mp3",
-      "muziek/Wie knaagt er aan die boom.mp3",
-      "muziek/Wood.ogg ",
-      "muziek/Zoek de connectie.mp3 ",
-      "muziek/Zonder mama.mp3 ",
-  ];
+    
+ 	
+let newsong = document.getElementById('new-song');
 
 
-  // Current index of the files array
-  var i = 0;
+let songbox = document.getElementById('song-box');
 
-  // Get the audio element
-  var music_player = document.querySelector("#music_list audio");
-
-  function random () {
-      // Check for last audio file in the playlist
-      if (i === files.length - 1) {
-          i = 0;
-      } else {
-          eval(i--);
+function setup() {
+  fetch('code/nummers.json')
+    .then(response => response.json())
+    .then(data => {
+      function getRandomsong() {
+        
+        const randomIdx = parseInt(Math.random() * data.length);
+        const { file, author, title} = data[randomIdx];
+        
+        setTimeout(() => {
+          document.getElementById('title').innerHTML = `${title}`;
+          document.getElementById('author').innerHTML = `-${author}`;
+          let audio = document.getElementById('audio');
+          audio.src= `${file}`;
+          audio.load();          
+        })
       }
+    
+      newsong.addEventListener('click', getRandomsong);
+    
+      getRandomsong();
+    }).catch(error => console.log(error.message))
+}
 
-      // Change the audio element source
-      var rand = files[~~(Math.random() * files.length)];
-      music_player.src = rand;
-  }
+//Load on run
+document.addEventListener('DOMContentLoaded', setup); 
 
-  // Check if the player is selected
-  if (music_player === null) {
-      throw "Playlist Player does not exists ...";
-  } else {
-      // Start the player
-      var rand = files[~~(Math.random() * files.length)];
-      music_player.src = rand;
-
-      // Listen for the music ended event, to play the next audio file
-      music_player.addEventListener('ended', random, false);
-  }
-</script>
-  <footer>
-    Deze site is gemaakt door FC Knaagdier
-  </footer>
-        </body>
+$(document).ready(function(){
+   $('p').css('text-align','center');
+});
+  </script>
+  </body>
 </html>
