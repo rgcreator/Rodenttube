@@ -53,6 +53,7 @@ function setup() {
       }
     
       newsong.addEventListener('click', getRandomsong);
+      document.getElementById('audio').addEventListener('ended', getRandomsong);
     
       getRandomsong();
     }).catch(error => console.log(error.message))
@@ -60,10 +61,6 @@ function setup() {
 
 //Load on run
 document.addEventListener('DOMContentLoaded', setup); 
-
-$(document).ready(function(){
-   $('p').css('text-align','center');
-});
   </script>
   </body>
 </html>
