@@ -4,7 +4,10 @@ h1{
 font-size: auto;
 }
 body{
-    background-color: #654321;
+    background-image: url('images/fcknaagdierlogo.jpg');
+    background-size: cover;	
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     overflow-y: hidden; /* Hide vertical scrollbar */
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
