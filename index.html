@@ -24,6 +24,7 @@ Your browser does not support the audio format.
       
       <div class="links">
           <button id="new-song">Volgende</a>
+            <button id="pause">Pause</button>
       </div>
   </div> 
 <script>
@@ -33,34 +34,98 @@ let newsong = document.getElementById('new-song');
 
 
 let songbox = document.getElementById('song-box');
+  window.onload = () => {
 
-function setup() {
-  fetch('code/nummers.json')
-    .then(response => response.json())
-    .then(data => {
-      function getRandomsong() {
-        
-        const randomIdx = parseInt(Math.random() * data.length);
-        const { file, author, title} = data[randomIdx];
-        
-        setTimeout(() => {
-          document.getElementById('title').innerHTML = `${title}`;
-          document.getElementById('author').innerHTML = `-${author}`;
-          let audio = document.getElementById('audio');
-          audio.src= `${file}`;
-          audio.load();          
-        })
-      }
-    
-      newsong.addEventListener('click', getRandomsong);
-      document.getElementById('audio').addEventListener('ended', getRandomsong);
-    
-      getRandomsong();
-    }).catch(error => console.log(error.message))
-}
+ //Variables
+       let author = new String();
+       let title2;
+       let songtitle = new String();
+       let songtitle2;
+       let authorelement = document.getElementById("author");
+    let audio = document.getElementById("audio");
+ let songlist =  new Array;
+ let titlelement = document.getElementById("title");
+ let buttonelement = document.getElementById("new-song");
+ let buttonelement2 = document.getElementById("pause");
+  songlist.push("muziek/tienduizendbeukennoten.ogg");
+ songlist.push("muziek/cupido.ogg");
+ songlist.push("muziek/DeBeverdans.ogg");
+ songlist.push("muziek/DitisRodenttube.ogg");
+ songlist.push("muziek/eetsla.ogg");
+ songlist.push("muziek/Hijknaagtdemooiste.ogg");
+ songlist.push("muziek/Iemandwaarikbomenmeekanknagen.ogg");
+ songlist.push("muziek/IkbenRicardo.ogg");
+ songlist.push("muziek/Ikknaaaghoutmetachtergrondmuziek.ogg");
+ songlist.push("muziek/Kerstbever.ogg");
+ songlist.push("muziek/Knagen.ogg");
+ songlist.push("muziek/Levehetknaagdierleven.ogg");
+ songlist.push("muziek/NibbleAgain.ogg");
+ songlist.push("muziek/Niemandkanbeterknagendanik.ogg");
+ songlist.push("muziek/RodenttubeRap.ogg");
+ songlist.push("muziek/Uiteindelijkmaaktgeldniksuit.ogg");
+ songlist.push("muziek/Vredewereldwijd.ogg");
+ songlist.push("muziek/Wegaannaareenbos.ogg");
+ songlist.push("muziek/Wedden.ogg");
+ songlist.push("muziek/Wieknaagteraandieboom.ogg");
+ songlist.push("muziek/Wood.ogg");
+ songlist.push("muziek/Zoekdeconnectie.ogg");
+ songlist.push("muziek/Zondermama.ogg");
+ //Gets random song
+ audio.src = songlist[Math.floor(Math.random() * songlist.length)];
+  audio.autoplay = true;
+ // play the audio
+   audio.load();
+   audio.play();
+   //Gets title of song
+   title2 = audio.src.replace(".ogg", "");
+   //Sets title of song
+ titlelement.innerHTML = title2;
+ //Sets author of song
+ authorelement.innerHTML = "FC Knaagdier";
+ //removes song from array when it ends and plays a new one
+   audio.onended = () => {
+ songlist.slice(songlist.indexOf(title2.toString()), 1);
+ audio.src = songlist[Math.floor(Math.random() * songlist.length)];
+ audio.load();
+ audio.play();
+   }
+ 
+   //Pause button
+   buttonelement2.onclick = () => {
+     if (audio.paused == false){
+       audio.pause();
+       buttonelement2.innerHTML = "Play";
+     }
+     else{
+       audio.play();
+       buttonelement2.innerHTML = "Pause";
+     }
+   }
+   //Next song button
+   buttonelement.onclick = () => {
+     //Gets invisibly the full title of the song to remove it from the array
+     songtitle2 = audio.src;
+     songtitle2 = songtitle2.replace("http://localhost", "");
+     songtitle2 = songtitle2.replace(/[0-9]/g, "");
+     songtitle2 = songtitle2.replace(":", "");
+     songtitle2 = songtitle2.replace("/assets", "../assets");
+     //removes song from array when it ends and plays a new one
+     songlist.splice(songlist.indexOf(songtitle2.toString()), 1);
+     //Gets random song
+ audio.src = songlist[Math.floor(Math.random() * songlist.length)];
+ audio.load();
+ audio.play();
+ //Gets title of song to display
+ title2 = audio.src.replace('.ogg', '');
+   titlelement.innerHTML = title2
+   //Reload page if no songs are left
+   if (songlist.length == 0){
+     window.location.reload();
+   }
+ }
+  }
 
-//Load on run
-document.addEventListener('DOMContentLoaded', setup); 
+
   </script>
   </body>
 </html>

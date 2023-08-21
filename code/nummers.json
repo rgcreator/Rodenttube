@@ -6,19 +6,19 @@
 },
 {
     "id": 2,
-    "file": "muziek/Cupido.mp3",
+    "file": "muziek/Cupido.ogg",
     "author": "FC Knaagdier",
     "title": "Cupido"
 },
 {
     "id": 3,
-    "file": "muziek/De Beverdans.mp3",
+    "file": "muziek/De Beverdans.ogg",
     "author": "FC Knaagdier",
     "title": "De Beverdans"
 },
 {
     "id": 4,
-    "file": "muziek/Dit is Rodenttube.mp3",
+    "file": "muziek/Dit is Rodenttube.ogg",
     "author": "FC Knaagdier",
     "title": "Dit is Rodenttube"
 },
@@ -30,25 +30,25 @@
 },
 {
     "id": 6,
-    "file": "muziek/Hij knaagt de mooiste.mp3",
+    "file": "muziek/Hij knaagt de mooiste.ogg",
     "author": "FC Knaagdier",
     "title": "Hij knaagt de mooiste"
 },
 {
     "id": 7,
-    "file": "muziek/Iemand waar ik bomen mee kan knagen.mp3",
+    "file": "muziek/Iemand waar ik bomen mee kan knagen.ogg",
     "author": "FC Knaagdier",
     "title": "Iemand waar ik bomen mee kan knagen"
 },
 {
     "id": 8,
-    "file": "muziek/Ik ben Ricardo.mp3",
+    "file": "muziek/Ik ben Ricardo.ogg",
     "author": "FC Knaagdier",
     "title": "Ik ben Ricardo"
 },
 {
     "id": 9,
-    "file": "muziek/Ik knaag hout met achtergrond muziek.mp3",
+    "file": "muziek/Ik knaag hout met achtergrond muziek.ogg",
     "author": "FC Knaagdier",
     "title": "Ik knaag hout"
 },
@@ -66,7 +66,7 @@
 },
 {
     "id": 12,
-    "file": "muziek/Leve het knaagdierleven.mp3",
+    "file": "muziek/Leve het knaagdierleven.ogg",
     "author": "FC Knaagdier",
     "title": "Leve het knaagdierleven"
 },
@@ -78,7 +78,7 @@
 },
 {
     "id": 14,
-    "file": "muziek/Niemand kan beter knagen dan ik.mp3",
+    "file": "muziek/Niemand kan beter knagen dan ik.ogg",
     "author": "FC Knaagdier",
     "title": "Niemand kan beter knagen dan ik"
 },
@@ -96,31 +96,31 @@
 },
 {
     "id": 17,
-    "file": "muziek/Uiteindelijk maakt geld niks uit.mp3",
+    "file": "muziek/Uiteindelijk maakt geld niks uit.ogg",
     "author": "FC Knaagdier",
     "title": "Uiteindelijk maakt geld niks uit"
 },
 {
     "id": 18,
-    "file": "muziek/Vrede wereldwijd.mp3",
+    "file": "muziek/Vrede wereldwijd.ogg",
     "author": "FC Knaagdier",
     "title": "Vrede wereldwijd"
 },
 {
     "id": 19,
-    "file": "muziek/We gaan naar een bos.mp3",
+    "file": "muziek/We gaan naar een bos.ogg",
     "author": "FC Knaagdier",
     "title": "We gaan naar een bos"
 },
 {
     "id": 20,
-    "file": "muziek/Wedden.mp3",
+    "file": "muziek/Wedden.ogg",
     "author": "FC Knaagdier",
     "title": "Wedden"
 },
 {
     "id": 21,
-    "file": "muziek/Wie knaagt er aan die boom.mp3",
+    "file": "muziek/Wie knaagt er aan die boom.ogg",
     "author": "FC Knaagdier",
     "title": "Wie knaagt er aan die boom"
 },
@@ -132,7 +132,7 @@
 },
 {
     "id": 23,
-    "file": "muziek/Zoek de connectie.mp3 ",
+    "file": "muziek/Zoek de connectie.ogg ",
     "author": "FC Knaagdier",
     "title": "Zoek de connectie"
 },
@@ -144,31 +144,31 @@
 },
 {
     "id": 25,
-    "file": "muziek/Zonder mama.mp3 ",
+    "file": "muziek/Zonder mama.ogg ",
     "author": "FC Knaagdier",
     "title": "Zonder mama"
 },
 {
     "id": 26,
-    "file": "muziek/Uiteindelijk maakt geld niks uit.mp3",
+    "file": "muziek/Uiteindelijk maakt geld niks uit.ogg",
     "author": "FC Knaagdier",
     "title": "Uiteindelijk maakt geld niks uit"
 },
 {
     "id": 27,
-    "file": "muziek/We gaan naar een bos.mp3",
+    "file": "muziek/We gaan naar een bos.ogg",
     "author": "FC Knaagdier",
     "title": "We gaan naar een bos"
 },
 {
     "id": 28,
-    "file": "muziek/Wedden.mp3",
+    "file": "muziek/Wedden.ogg",
     "author": "FC Knaagdier",
     "title": "Wedden"
 },
 {
     "id": 29,
-    "file": "muziek/Wie knaagt er aan die boom.mp3",
+    "file": "muziek/Wie knaagt er aan die boom.ogg",
     "author": "FC Knaagdier",
     "title": "Wie knaagt er aan die boom"
 },
@@ -180,13 +180,13 @@
 },
 {
     "id": 31,
-    "file": "muziek/Zoek de connectie.mp3 ",
+    "file": "muziek/Zoek de connectie.ogg ",
     "author": "FC Knaagdier",
     "title": "Zoek de connectie"
 },
 {
     "id": 32,
-    "file": "muziek/Zonder mama.mp3 ",
+    "file": "muziek/Zonder mama.ogg ",
     "author": "FC Knaagdier",
     "title": "Zonder mama"
 }
