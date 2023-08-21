@@ -106,6 +106,7 @@ let songbox = document.getElementById('song-box');
      //Gets invisibly the full title of the song to remove it from the array
      songtitle2 = audio.src;
      songtitle2 = songtitle2.replace("http://localhost", "");
+     songtitle2 = songtitle2.replace("https://rodenttube.nl", "")
      songtitle2 = songtitle2.replace(/[0-9]/g, "");
      songtitle2 = songtitle2.replace(":", "");
      songtitle2 = songtitle2.replace("/assets", "../assets");
