@@ -12,12 +12,12 @@
         <img src="images/rodenttube banner bs.png" class="d-none d-lg-block col-lg-6" style="height: 125px;" alt="logo">
         <img src="images/fcknaagdierlogo.jpg	" alt="logo" width="100" height="100">
         <div style="background-color: #654321;">
-        <p style="text-align: center; font-weight: bold; font-size: 30px;" id="title"></p>
-        <p style="text-align: center; font-weight:  bold; font-size: 30px;" id="author"></p>
+        <p style="text-align: center; font-weight: bold;" class="col-12" id="title"></p>
+        <p style="text-align: center; font-weight: bold;" class="col-12" id='author' ></p>
         </div>
     <div id="song-box">
       <br>
-      <video class="video" id="audioenvideo" controls="controls" autoplay>
+      <video class="video col-sm-12 col-lg-4" id="audioenvideo" controls="controls" autoplay>
 <source src="" type="video"></source>
 Your browser does not support the video format.
 </video>
@@ -26,6 +26,7 @@ Your browser does not support the video format.
           <button id="new-song">Volgende liedje</a>
             <button id="pause">Pause</button>
             <button id="video" onclick="playvideo ()">Volgende video</button>
+            <button id="podcast" onclick="playpodcast ()">Volgende podcast</button>
       </div>
   </div> 
 <script>
@@ -99,8 +100,6 @@ let songbox = document.getElementById('song-box');
 
    //Sets title of song
  titlelement.innerHTML = title2;
- audioenvideo.src =  Audiolist[Math.floor(Math.random() *  Audiolist.length)];
- audioenvideo.play();
    //Reload page if no songs are left
    if (Audiolist.length == 0){
      window.location.reload();
@@ -113,13 +112,14 @@ let songbox = document.getElementById('song-box');
     let titlelement = document.getElementById("title");
     playvideobutton = document.getElementById("audioenvideo");
     nextvideobutton = document.getElementById("new-video");
+    let author = document.getElementById("author");
     let videolist = new Array;
     let titlevideo = new String;
+    let title2 = new String;
   videolist.push("Aankondigingnieuwewebsiterudenttube.nl.webm");
   videolist.push("WatkanjelerenvaneenInstagramvideovandaughtersdiary.webm");
   videolist.push("Onderhandelingenfnvenov.webm");
   videolist.push("BezigmeteenAlexaSkill.webm");
-  videolist.push("Booktubevideocontentrecht.webm");
   videolist.push("BooktubevideoDenkalseenmonnik.webm");
   videolist.push("DeERUvoertverbodinopolieuitRusland.webm");
   videolist.push("Deknaagdiercastkomtonline.webm");
@@ -140,23 +140,26 @@ let songbox = document.getElementById('song-box');
   videolist.push("WatkanjelerenvaneenInstagramvideovandaughtersdiary.webm");
   videolist.push("Wijalsknaagdierenzeggennietéén.webm");
   videolist.push("Wijalsknaagdierenzeggenniettwee.webm");
-  titlevideo = videolist[Math.floor(Math.random() *  videolist.length)];   
-    audioenvideo.src = titlevideo;  //Sets title of song
- titlelement.innerHTML = titlevideo;
- //Sets author of song
- authorelement.innerHTML = "FC Knaagdier";
-  audioenvideo.load();
-  audioenvideo.play();
-    videolist.splice( videolist.indexOf(titlevideo.toString()), 1);
-    audioenvideo.src =  videolist[Math.floor(Math.random() *  videolist.length)];
-    audioenvideo.load();
-    audioenvideo.play();
-    if (videolist == 0){
-      window.location.reload();
-    }
-   }
+//get random video
+ title2 =  videolist[Math.floor(Math.random() *  videolist.length)];
 
- 
+  //removes song from array when it ends and plays a new one     //Gets random song
+   //Sets author of song
+ //Gets random song
+  titlelement.innerHTML = title2;
+ audioenvideo.src =  title2;
+ audioenvideo.load();
+ audioenvideo.play()
+document.setlocalstorage("title", title2);
+   //Gets title of song
+
+   //Sets title of song
+ authorelement.innerHTML = "FC Knaagdier";
+
+   //Sets title of song
+ titlelement.innerHTML = title2;
+   //Reload page if no songs are left
+  }
   </script>
   </body>
 </html>
