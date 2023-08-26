@@ -29,7 +29,6 @@ Your browser does not support the video format.
       </div>
   </div> 
 <script>
-    
  	
 let newsong = document.getElementById('new-song');
 
@@ -54,12 +53,12 @@ let songbox = document.getElementById('song-box');
   Audiolist.push("Niemandkanbeterknagendanik.ogg");
   Audiolist.push("RodenttubeRap.ogg");
   Audiolist.push("Uiteindelijkmaaktgeldniksuit.ogg");
-  Audiolist.push("Vredewereldwijd.ogg");
   Audiolist.push("Wegaannaareenbos.ogg");
   Audiolist.push("Wedden.ogg");
-  Audiolist.push("Wieknaagteraandieboom.ogg");
   Audiolist.push("Wood.ogg");
   Audiolist.push("Zoekdeconnectie.ogg");
+  Audiolist.push("Ikknaaghoutvoor10.ogg");
+  Audiolist.push("Ik ga knagen.mp3");
 
   title2 =  Audiolist[Math.floor(Math.random() *  Audiolist.length)];
    //Sets author of song
@@ -75,7 +74,6 @@ let songbox = document.getElementById('song-box');
  audioenvideo.autoplay = true;
  audioenvideo.load();
   audioenvideo.play();
- 
    //Pause button
    buttonelement2.onclick = () => {
      if (audioenvideo.paused == false){
@@ -90,7 +88,7 @@ let songbox = document.getElementById('song-box');
    //Next song button
    buttonelement.onclick = () => {
      //removes song from array when it ends and plays a new one
-      Audiolist.splice( Audiolist.indexOf(songtitle2.toString()), 1);
+      Audiolist.splice( Audiolist.indexOf(title2.toString()), 1);
      //Gets random song
      title2 =  Audiolist[Math.floor(Math.random() *  Audiolist.length)];
    //Sets author of song
@@ -103,12 +101,12 @@ let songbox = document.getElementById('song-box');
  titlelement.innerHTML = title2;
  audioenvideo.src =  Audiolist[Math.floor(Math.random() *  Audiolist.length)];
  audioenvideo.play();
-   }
    //Reload page if no songs are left
-   if ( Audiolist.length == 0){
+   if (Audiolist.length == 0){
      window.location.reload();
    }
  }
+}
 
   //change to video
   function playvideo (){
