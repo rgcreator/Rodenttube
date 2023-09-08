@@ -31,8 +31,9 @@ Your browser does not support the video format.
       <div class="links">
           <button id="new-song">Volgende liedje</a>
             <button id="pause">Pause</button>
-            <button id="video" onclick="playvideo ()">Volgende video</button>
-            <button id="podcast" onclick="playpodcast ()">Volgende podcast</button>
+            <button id="video" onclick="playvideo ()">Verander naar video</button>
+            <button id="volgendevideo" onclick="volgendevideo ()">Volgende video</button>
+            <button id="vorigevideo" onclick="vorigevideo ()">Vorige Video</button>
       </div>
   </div> 
 <script>
@@ -69,9 +70,6 @@ let songbox = document.getElementById('song-box');
   Audiolist.push("Beverindeschulden.mp3");
   Audiolist.push("Ikbeneeneenzamebever.mp3");
   Audiolist.push("Ikgaknagen.mp3");
-  Audiolist.push("Genietvanhetleven.mp3");
-  Audiolist.push("Ikbenbever.mp3");
-  Audiolist.push("Knagenthout.mp3");
   title2 =  Audiolist[Math.floor(Math.random() *  Audiolist.length)];
    //Sets author of song
  //Gets random song
@@ -100,7 +98,7 @@ let songbox = document.getElementById('song-box');
    //Next song button
    buttonelement.onclick = () => {
      //removes song from array when it ends and plays a new one
-      Audiolist.splice( Audiolist.indexOf(title2.toString()), 1);
+      Audiolist.splice(Audiolist.indexOf(title2.toString()), 1);
      //Gets random song
      title2 =  Audiolist[Math.floor(Math.random() *  Audiolist.length)];
    //Sets author of song
@@ -121,13 +119,14 @@ let songbox = document.getElementById('song-box');
   //change to video
   function playvideo (){
     let titlelement = document.getElementById("title");
-    playvideobutton = document.getElementById("audioenvideo");
-    nextvideobutton = document.getElementById("new-video");
+ let   playvideobutton = document.getElementById("audioenvideo");
+  let  nextvideobutton = document.getElementById("volgendevideo");
+let audioenvideo = document.getElementById("audioenvideo");
     let author = document.getElementById("author");
     let videolist = new Array;
     let titlevideo = new String;
     let title2 = new String;
-  videolist.push("Aankondigingnieuwewebsiterudenttube.nl.webm");
+    index = 0;
   videolist.push("WatkanjelerenvaneenInstagramvideovandaughtersdiary.webm");
   videolist.push("Onderhandelingenfnvenov.webm");
   videolist.push("BezigmeteenAlexaSkill.webm");
@@ -150,26 +149,35 @@ let songbox = document.getElementById('song-box');
   videolist.push("WatkanjelerenvaneenInstagramvideovandaughtersdiary.webm");
   videolist.push("Wijalsknaagdierenzeggennietéén.webm");
   videolist.push("Wijalsknaagdierenzeggenniettwee.webm");
-//get random video
- title2 =  videolist[Math.floor(Math.random() *  videolist.length)];
+var i = 0;
+let next = document.getElementById('volgendevideo');
+let back = document.getElementById('vorigevideo');
 
-  //removes song from array when it ends and plays a new one     //Gets random song
-   //Sets author of song
- //Gets random song
-  titlelement.innerHTML = title2;
- audioenvideo.src =  title2;
- audioenvideo.load();
- audioenvideo.play()
-document.setlocalstorage("title", title2);
-   //Gets title of song
-
-   //Sets title of song
- authorelement.innerHTML = "FC Knaagdier";
-
-   //Sets title of song
- titlelement.innerHTML = title2;
-   //Reload page if no songs are left
+next.onclick = function(){
+  if (i < videolist.length - 1){
+    i++;
   }
+  else{
+    i = 0;
+  }
+  audioenvideo.src = videolist[i];
+  audioenvideo.play();
+}
+
+back.onclick = function(){
+  if (i > 0){
+    i--;
+  }
+  else{
+    i = videolist.length - 1;
+  }
+  audioenvideo.src = videolist[i];
+  audioenvideo.play();
+}
+
+audioenvideo.src = videolist[i];
+audioenvideo.play();
+} 
   </script>
   </body>
 </html>
