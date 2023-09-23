@@ -23,7 +23,7 @@
     <div id="song-box">
       <br>
       <div class="d-flex justify-content-center">
-      <video class="video col-10 col-lg-4" id="audioenvideo"  autoplay>
+      <video class="video col-10 col-lg-4" id="audioenvideo" autoplay>
 <source src="" type="video"></source>
 Your browser does not support the video format.
 </video>
@@ -53,32 +53,32 @@ let songbox = document.getElementById('song-box');
  let titlelement = document.getElementById("title");
  let buttonelement = document.getElementById("new-song");
  let buttonelement2 = document.getElementById("pause");
-  Audiolist.push("DitisRodenttube.mp3");
-  Audiolist.push("eetsla.mp3");
-  Audiolist.push("Kerstbever.mp3");
-  Audiolist.push("Knagen.mp3");
-  Audiolist.push("NibbleAgain.mp3");
-  Audiolist.push("Niemandkanbeterknagendanik.mp3");
-  Audiolist.push("RodenttubeRap.mp3");
-  Audiolist.push("Uiteindelijkmaaktgeldniksuit.mp3");
-  Audiolist.push("Wegaannaareenbos.mp3");
-  Audiolist.push("Wedden.mp3");
-  Audiolist.push("Wood.mp3");
-  Audiolist.push("Zoekdeconnectie.mp3");
-  Audiolist.push("Ikknaaghoutvoor.mp3");
-  Audiolist.push("Ikgaknagen.mp3");
-  Audiolist.push("Beverindeschulden.mp3");
-  Audiolist.push("Ikbeneeneenzamebever.mp3");
-  Audiolist.push("Ikgaknagen.mp3");
+  Audiolist.push("muziek/DitisRodenttube.mp3");
+  Audiolist.push("muziek/eetsla.mp3");
+  Audiolist.push("muziek/Kerstbever.mp3");
+  Audiolist.push("muziek/Knagen.mp3");
+  Audiolist.push("muziek/NibbleAgain.mp3");
+  Audiolist.push("muziek/Niemandkanbeterknagendanik.mp3");
+  Audiolist.push("muziek/RodenttubeRap.mp3");
+  Audiolist.push("muziek/Uiteindelijkmaaktgeldniksuit.mp3");
+  Audiolist.push("muziek/Wegaannaareenbos.mp3");
+  Audiolist.push("muziek/Wedden.mp3");
+  Audiolist.push("muziek/Wood.mp3");
+  Audiolist.push("muziek/Zoekdeconnectie.mp3");
+  Audiolist.push("muziek/Ikknaaghoutvoor.mp3");
+  Audiolist.push("muziek/Ikgaknagen.mp3");
+  Audiolist.push("muziek/Beverindeschulden.mp3");
+  Audiolist.push("muziek/Ikbeneeneenzamebever.mp3");
+  Audiolist.push("muziek/Ikgaknagen.mp3");
   title2 =  Audiolist[Math.floor(Math.random() *  Audiolist.length)];
    //Sets author of song
  //Gets random song
+
  audioenvideo.src =  title2;
 
-   //Gets title of song
-
    //Sets title of song
- titlelement.innerHTML = title2;
+
+ titlelement.innerHTML =  title2.slice(7);
  //Sets author of song
  authorelement.innerHTML = "FC Knaagdier";
  audioenvideo.autoplay = true;
@@ -94,6 +94,12 @@ let songbox = document.getElementById('song-box');
        audioenvideo.play();
        buttonelement2.innerHTML = "Pause";
      }
+   }
+   if (audioenvideo.paused == false){
+     buttonelement2.innerHTML = "Pause";
+   }
+   else{
+     buttonelement2.innerHTML = "Play";
    }
    //Next song button
    buttonelement.onclick = () => {
@@ -127,29 +133,29 @@ let audioenvideo = document.getElementById("audioenvideo");
     let titlevideo = new String;
     let title2 = new String;
     index = 0;
-videolist.push("Labelwilsamenwerken.mp4");
-  videolist.push("WatkanjelerenvaneenInstagramvideovandaughtersdiary.webm");
-  videolist.push("Onderhandelingenfnvenov.webm");
-  videolist.push("BezigmeteenAlexaSkill.webm");
-  videolist.push("DeERUvoertverbodinopolieuitRusland.webm");
-  videolist.push("Deknaagdiercastkomtonline.webm");
-  videolist.push("Dewaarheidoverdevluchtelingencrisis.webm")
-  videolist.push("Geencompensatievoorkinderopvang.webm");
-  videolist.push("Gokreclamesopalgemeenpubliekgaanverbodenworden.webm");
-  videolist.push("HamsterAdajawordtgepest.webm");
-  videolist.push("JakeDankwoordheeftgezegddathijhomois.webm");
-  videolist.push("KlimaatprotestBeverwijk.webm");
-  videolist.push("KnaagdierlaatgrafsteenmakenvaninternetExplorer.webm");
-  videolist.push("MarkdeBeverheeftsms'jesverwijderd.webm");
-  videolist.push("Nethoutgaatdelenduurdermaken.webm");
-  videolist.push("RadiovijfdrieachtvoorprinsesMaximafoundation.webm");
-  videolist.push("RodenttubestaatindePlayStore.webm");
-  videolist.push("Siebertvanhoutenheeftfraudegepleegdmethoutkapjes.webm");
-  videolist.push("StichtingdeknoevelinMaastricht.webm");
-  videolist.push("Watalsdropshopreclameseerlijkzijn.webm");
-  videolist.push("WatkanjelerenvaneenInstagramvideovandaughtersdiary.webm");
-  videolist.push("Wijalsknaagdierenzeggennietéén.webm");
-  videolist.push("Wijalsknaagdierenzeggenniettwee.webm");
+videolist.push("video/Labelwilsamenwerken.webm");
+  videolist.push("video/WatkanjelerenvaneenInstagramvideovandaughtersdiary.webm");
+  videolist.push("video/Onderhandelingenfnvenov.webm");
+  videolist.push("video/BezigmeteenAlexaSkill.webm");
+  videolist.push("video/DeERUvoertverbodinopolieuitRusland.webm");
+  videolist.push("video/Deknaagdiercastkomtonline.webm");
+  videolist.push("video/Dewaarheidoverdevluchtelingencrisis.webm")
+  videolist.push("video/Geencompensatievoorkinderopvang.webm");
+  videolist.push("video/Gokreclamesopalgemeenpubliekgaanverbodenworden.webm");
+  videolist.push("video/HamsterAdajawordtgepest.webm");
+  videolist.push("video/JakeDankwoordheeftgezegddathijhomois.webm");
+  videolist.push("video/KlimaatprotestBeverwijk.webm");
+  videolist.push("video/KnaagdierlaatgrafsteenmakenvaninternetExplorer.webm");
+  videolist.push("video/MarkdeBeverheeftsms'jesverwijderd.webm");
+  videolist.push("video/Nethoutgaatdelenduurdermaken.webm");
+  videolist.push("video/RadiovijfdrieachtvoorprinsesMaximafoundation.webm");
+  videolist.push("video/RodenttubestaatindePlayStore.webm");
+  videolist.push("video/Siebertvanhoutenheeftfraudegepleegdmethoutkapjes.webm");
+  videolist.push("video/StichtingdeknoevelinMaastricht.webm");
+  videolist.push("video/Watalsdropshopreclameseerlijkzijn.webm");
+  videolist.push("video/WatkanjelerenvaneenInstagramvideovandaughtersdiary.webm");
+  videolist.push("video/Wijalsknaagdierenzeggennietéén.webm");
+  videolist.push("video/Wijalsknaagdierenzeggenniettwee.webm");
 var i = 0;
 let next = document.getElementById('volgendevideo');
 let back = document.getElementById('vorigevideo');
@@ -163,6 +169,7 @@ next.onclick = function(){
   }
   audioenvideo.src = videolist[i];
   audioenvideo.play();
+  titlelement.innerHTML = videolist[i].slice(6);
 }
 
 back.onclick = function(){
@@ -174,10 +181,14 @@ back.onclick = function(){
   }
   audioenvideo.src = videolist[i];
   audioenvideo.play();
+  titlelement.innerHTML = videolist[i].slice(6);
+
 }
 
 audioenvideo.src = videolist[i];
 audioenvideo.play();
+titlelement.innerHTML = videolist[i].slice(6);
+
 } 
   </script>
   </body>

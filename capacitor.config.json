@@ -1,0 +1,8 @@
+{
+  "appId": "com.fcknaagdier.rodenttube4",
+  "appName": "Rodenttube",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
