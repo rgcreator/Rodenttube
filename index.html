@@ -53,6 +53,7 @@ let songbox = document.getElementById('song-box');
  let titlelement = document.getElementById("title");
  let buttonelement = document.getElementById("new-song");
  let buttonelement2 = document.getElementById("pause");
+ Audiolist.push("muziek/Hij knaagt de mooiste.mp3");
   Audiolist.push("muziek/DitisRodenttube.mp3");
   Audiolist.push("muziek/eetsla.mp3");
   Audiolist.push("muziek/Kerstbever.mp3");
@@ -109,12 +110,12 @@ let songbox = document.getElementById('song-box');
      title2 =  Audiolist[Math.floor(Math.random() *  Audiolist.length)];
    //Sets author of song
  //Gets random song
- audioenvideo.src =  title2.slice(7);
+ audioenvideo.src =  title2;
 
    //Gets title of song
 
    //Sets title of song
- titlelement.innerHTML = title2;
+ titlelement.innerHTML = title2.slice(7);
    //Reload page if no songs are left
    if (Audiolist.length == 0){
      window.location.reload();
